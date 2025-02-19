@@ -393,6 +393,10 @@ public class Main {
 
         // Generate Class Performance Summary
         public void generateSummary() {
+            if (this.studentList.isEmpty()) {
+                System.out.println("No students found!\n");
+                return;
+            }
             calculateAverageGPA();
             countTotalStudents();
             displayTop5();
@@ -403,7 +407,7 @@ public class Main {
     // ---------------------------------------------- MAIN FUNCTION ----------------------------------------------
 
     public static void main(String[] args) {
-        System.out.println("\t===> Welcome To Student Management System Application... <===\n");
+        System.out.println("\n\t===> Welcome To Student Management System Application... <===\n");
         Scanner scanner = new Scanner(System.in);
         StudentSystem system = new StudentSystem();
 
