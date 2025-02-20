@@ -59,11 +59,11 @@ The **Student Management System** is a Java-based console application designed t
 2. **Compile and Run**:
     - Compile the Java file:
       ```bash
-      javac Main.java
+      javac App.java
       ```
     - Run the program:
       ```bash
-      java Main
+      java App
       ```
 
 3. **Follow the Menu**:

@@ -47,7 +47,6 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -81,7 +80,7 @@
       <updated>1740009132579</updated>
       <workItem from="1740009135457" duration="149000" />
       <workItem from="1740034663469" duration="122000" />
-      <workItem from="1740034793038" duration="2408000" />
+      <workItem from="1740034793038" duration="612000" />
     </task>
     <servers />
   </component>
