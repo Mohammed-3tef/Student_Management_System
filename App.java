@@ -29,14 +29,41 @@ public class App {
 
             switch (choice) {
                 case 1:
-                    String name = InputValidator.addUniqueName(scanner, system);
-                    int id = InputValidator.addUniqueID(scanner, system);
-                    int age = InputValidator.inputValidAge(scanner);
-                    double gpa = InputValidator.inputValidGPA(scanner);
-                    String year = InputValidator.inputValidYear(scanner);
-                    String department = InputValidator.inputValidDepartment(scanner);
+                    while (true) {
+                        System.out.println("Choose an option to add student:");
+                        System.out.println(" 1. Add Student from CSV File.");
+                        System.out.println(" 2. Add Student Manually.");
+                        System.out.println(" 0. Exit Add Student.");
 
-                    system.addStudent(name, id, age, gpa, year, department);
+                        int addChoice = InputValidator.inputValidChoice(scanner);
+
+                        if (addChoice == 0) {
+                            System.out.println();
+                            break;
+                        }
+
+                        switch (addChoice) {
+                            case 1:
+                                system = CsvFileHandler.readCsvFile();
+                                break;
+
+                            case 2:
+                                String name = InputValidator.addUniqueName(scanner, system);
+                                int id = InputValidator.addUniqueID(scanner, system);
+                                int age = InputValidator.inputValidAge(scanner);
+                                double gpa = InputValidator.inputValidGPA(scanner);
+                                String year = InputValidator.inputValidYear(scanner);
+                                String department = InputValidator.inputValidDepartment(scanner);
+
+                                if (year.equals("First") || year.equals("Second")) department = "General";
+
+                                system.addStudent(name, id, age, gpa, year, department, false);
+                                break;
+
+                            default:
+                                System.out.println("Invalid choice, please try again.");
+                        }
+                    }
                     break;
 
                 case 2:
@@ -105,16 +132,40 @@ public class App {
                     break;
 
                 case 5:
-                    System.out.print("Enter sorting criteria (GPA, ID, Name, Year): ");
-                    String sortBy = scanner.nextLine();
+                    while (true) {
+                        System.out.println("Output all students in:");
+                        System.out.println(" 1. The Console.");
+                        System.out.println(" 2. A File.");
+                        System.out.println(" 0. Exit List and Sort.");
 
-                    while (!sortBy.matches("GPA|ID|Name|Year")) {
-                        System.out.println("Invalid input. Please enter a valid sorting criteria.");
-                        System.out.print("Enter sorting criteria (GPA, ID, Name, Year): ");
-                        sortBy = scanner.nextLine();
+                        int outputChoice = InputValidator.inputValidChoice(scanner);
+
+                        if (outputChoice == 0) {
+                            System.out.println();
+                            break;
+                        }
+
+                        else if (outputChoice == 1) {
+                            System.out.print("Enter sorting criteria (GPA, ID, Name, Year): ");
+                            String sortBy = scanner.nextLine();
+
+                            while (!sortBy.matches("GPA|ID|Name|Year")) {
+                                System.out.println("Invalid input. Please enter a valid sorting criteria.");
+                                System.out.print("Enter sorting criteria (GPA, ID, Name, Year): ");
+                                sortBy = scanner.nextLine();
+                            }
+
+                            system.listAndSortAllStudents(sortBy);
+                            break;
+                        }
+
+                        else if (outputChoice == 2) {
+                            CsvFileHandler.writeCsvFile(system);
+                            break;
+                        }
+
+                        else System.out.println("Invalid choice, please try again.\n");
                     }
-
-                    system.listAndSortAllStudents(sortBy);
                     break;
 
                 case 6:
@@ -174,7 +225,29 @@ public class App {
                     break;
 
                 case 11:
-                    system.generateSummary();
+                    System.out.println("Choose an option to output generated summary:");
+                    System.out.println(" 1. Output the Summary in the Console.");
+                    System.out.println(" 2. Output the Summary in the Report File.");
+                    System.out.println(" 0. Exit Summary.");
+
+                    int summaryChoice = InputValidator.inputValidChoice(scanner);
+                    if (summaryChoice == 0) {
+                        System.out.println();
+                        break;
+                    }
+
+                    switch (summaryChoice) {
+                        case 1:
+                            system.generateSummary();
+                            break;
+
+                        case 2:
+                            TxtFileHandler.writeTxtFile(system);
+                            break;
+
+                        default:
+                            System.out.println("Invalid choice, please try again.");
+                    }
                     break;
 
                 case 0:

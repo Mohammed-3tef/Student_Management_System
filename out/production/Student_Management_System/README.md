@@ -97,7 +97,7 @@ The system ensures all inputs are valid:
 - **Input Validation**:
     - `inputValidName`, `inputValidID`, `inputValidAge`, `inputValidGPA`, `inputValidYear`, `inputValidDepartment`, `inputValidChoice`.
 - **Student Operations**:
-    - `addStudent`, `removeStudentByID`, `updateStudentByID`, `searchByID`, `listAndSortAllStudents`, `filterByAge`, `filterByGPA`, `filterByYear`, `filterByDepartment`, `countTotalStudents`, `calculateAverageGPA`, `displayTop5`, `displayFailingStudents`, `generateSummary`.
+    - `addStudent`, `removeStudentByID`, `updateStudentByID`, `searchByID`, `listAndSortAllStudents`, `filterByAge`, `filterByGPA`, `filterByYear`, `filterByDepartment`, `countTotalStudents`, `calculateAverageGPA`, `displayTop5`, `displayFailingStudents`, `countStudentsByYear`, `generateSummary`.
 
 ---
 

@@ -5,6 +5,17 @@ import java.util.Scanner;
 
 public class InputValidator {
 
+    public static String getFilePath(Scanner scanner, String extension) {
+        String filePath;
+        while (true) {
+            System.out.print("Enter the path of the CSV file to read: ");
+            filePath = scanner.nextLine().trim();
+            if (filePath.endsWith(extension)) break;
+            System.out.println("Invalid input. Please enter a valid CSV file path.");
+        }
+        return filePath;
+    }
+
     public static String inputValidName(Scanner scanner) {
         String name;
         while (true) {
@@ -103,12 +114,12 @@ public class InputValidator {
     }
 
     public static String inputValidDepartment(Scanner scanner) {
-        System.out.print("Enter Student's Department (CS - IS - AI - IT - DS): ");
+        System.out.print("Enter Student's Department (CS - IS - AI - IT - DS - General): ");
 
         String department = scanner.nextLine();
-        while (!department.matches("CS|IS|AI|IT|DS")) {
+        while (!department.matches("CS|IS|AI|IT|DS|General")) {
             System.out.println("Invalid input. Please enter a valid year.");
-            System.out.print("Enter Student's Department (CS - IS - AI - IT - DS): ");
+            System.out.print("Enter Student's Department (CS - IS - AI - IT - DS - General): ");
             department = scanner.nextLine();
         }
 

@@ -1,0 +1,26 @@
+------------------------------ CLASS PERFORMANCE ------------------------------
+
+Total number of students: 23
+
+Average GPA: 2.9913043478260875
+
+Year-wise Student Count:
+ - First Year: 7
+ - Second Year: 5
+ - Third Year: 6
+ - Fourth Year: 4
+
+Top 5 Performing Students:
+ 1. Aya Mostafa, ID: 20231159, Age: 21, GPA: 3.9, Year: Third, Department: IT
+ 2. Fatima Ali, ID: 20231149, Age: 18, GPA: 3.9, Year: First, Department: General
+ 3. Ahmed Yasser, ID: 20231144, Age: 20, GPA: 3.8, Year: Second, Department: General
+ 4. Alaa Reda, ID: 20231157, Age: 19, GPA: 3.8, Year: First, Department: General
+ 5. Laila Mostafa, ID: 20231147, Age: 19, GPA: 3.7, Year: First, Department: General
+
+Failing students who have GPA less than 2.0:
+
+ - Hatem Omar, ID: 20231165, Age: 21, GPA: 1.9, Year: Fourth, Department: AI
+ - Ali Hassan, ID: 20231163, Age: 19, GPA: 1.8, Year: Second, Department: General
+ - Samar Nabil, ID: 20231166, Age: 22, GPA: 1.7, Year: First, Department: General
+ - Mona Hafez, ID: 20231164, Age: 20, GPA: 1.5, Year: Third, Department: CS
+

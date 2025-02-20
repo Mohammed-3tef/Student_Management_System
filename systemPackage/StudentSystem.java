@@ -5,7 +5,7 @@ import java.util.Comparator;
     // ---------------------------------------------- STUDENT SYSTEM CLASS ----------------------------------------------
 
 public class StudentSystem {
-    private ArrayList<Student> studentList;
+    private final ArrayList<Student> studentList;
 
     public StudentSystem() {this.studentList = new ArrayList<>();}
     public ArrayList<Student> getStudentList() {return studentList;}
@@ -32,7 +32,7 @@ public class StudentSystem {
         }
     }
 
-    public void addStudent(String newName, int newID, int newAge, double newGPA, String newYear, String newDepartment) {
+    public void addStudent(String newName, int newID, int newAge, double newGPA, String newYear, String newDepartment, boolean byCSV) {
         Student newStudent = new Student();
         newStudent.name = newName;
         newStudent.ID = newID;
@@ -41,7 +41,7 @@ public class StudentSystem {
         newStudent.year = newYear;
         newStudent.department = newDepartment;
         this.studentList.add(newStudent);
-        System.out.println("Student added successfully!\n");
+        if (!byCSV) System.out.println("Student added successfully!\n");
     }
 
     public void removeStudentByID(int ID) {
@@ -106,7 +106,7 @@ public class StudentSystem {
 
         System.out.println("\nList of Students:");
         for (Student student : this.studentList) {
-            System.out.print(" " + student.name);
+            System.out.print(" - " + student.name);
             System.out.print(", ID: " + student.ID);
             System.out.print(", Age: " + student.age);
             System.out.print(", GPA: " + student.GPA);
@@ -123,7 +123,7 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             if (student.age == age) {
                 isFound = true;
-                System.out.print(" " + student.name);
+                System.out.print(" - " + student.name);
                 System.out.print(", ID: " + student.ID);
                 System.out.print(", GPA: " + student.GPA);
                 System.out.print(", Year: " + student.year);
@@ -141,7 +141,7 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             if (student.GPA == GPA) {
                 isFound = true;
-                System.out.print(" " + student.name);
+                System.out.print(" - " + student.name);
                 System.out.print(", ID: " + student.ID);
                 System.out.print(", Age: " + student.age);
                 System.out.print(", Year: " + student.year);
@@ -159,7 +159,7 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             if (student.year.equals(year)) {
                 isFound = true;
-                System.out.print(" " + student.name);
+                System.out.print(" - " + student.name);
                 System.out.print(", ID: " + student.ID);
                 System.out.print(", Age: " + student.age);
                 System.out.print(", GPA: " + student.GPA);
@@ -177,7 +177,7 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             if (student.department.equals(department)) {
                 isFound = true;
-                System.out.print(" " + student.name);
+                System.out.print(" - " + student.name);
                 System.out.print(", ID: " + student.ID);
                 System.out.print(", Age: " + student.age);
                 System.out.print(", GPA: " + student.GPA);
@@ -211,7 +211,7 @@ public class StudentSystem {
         System.out.println("Top 5 Performing Students:");
         int count = 1;
         for (Student student : this.studentList) {
-            if (student.GPA < 2.0) break;
+            if (student.GPA < 2.0 || count > 5) break;
             System.out.print(" " + (count++) + ". ");
             System.out.print(student.name);
             System.out.print(", ID: " + student.ID);
@@ -231,7 +231,7 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             if (student.GPA < 2.0) {
                 isFailing = true;
-                System.out.print(" " + student.name);
+                System.out.print(" - " + student.name);
                 System.out.print(", ID: " + student.ID);
                 System.out.print(", Age: " + student.age);
                 System.out.print(", GPA: " + student.GPA);
@@ -268,6 +268,8 @@ public class StudentSystem {
             System.out.println("No students found!\n");
             return;
         }
+
+        System.out.println("\n------------------------------ CLASS PERFORMANCE ------------------------------\n");
         calculateAverageGPA();
         countTotalStudents();
         countStudentsByYear();
