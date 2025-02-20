@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FinalStudents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Students.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/FinalStudents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/students.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +32,12 @@
     &quot;assignee&quot;: &quot;Mohammed-3tef&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mohammed-3tef/Student_Management_System.git",
-    "accountId": "93ba2ee0-4ddd-44e1-8f22-0da84576aa33"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mohammed-3tef/Student_Management_System.git&quot;,
+    &quot;accountId&quot;: &quot;93ba2ee0-4ddd-44e1-8f22-0da84576aa33&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -84,6 +86,8 @@
       <workItem from="1740034793038" duration="2408000" />
       <workItem from="1740057271428" duration="9652000" />
       <workItem from="1740067068242" duration="118000" />
+      <workItem from="1740068628929" duration="289000" />
+      <workItem from="1740069110923" duration="377000" />
     </task>
     <servers />
   </component>
