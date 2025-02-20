@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/StudentSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalStudents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/FinalStudents.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +30,12 @@
     &quot;assignee&quot;: &quot;Mohammed-3tef&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mohammed-3tef/Simple_Library_Management_System.git&quot;,
-    &quot;accountId&quot;: &quot;93ba2ee0-4ddd-44e1-8f22-0da84576aa33&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mohammed-3tef/Student_Management_System.git",
+    "accountId": "93ba2ee0-4ddd-44e1-8f22-0da84576aa33"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -85,6 +83,7 @@
       <workItem from="1740034663469" duration="122000" />
       <workItem from="1740034793038" duration="2408000" />
       <workItem from="1740057271428" duration="9652000" />
+      <workItem from="1740067068242" duration="118000" />
     </task>
     <servers />
   </component>

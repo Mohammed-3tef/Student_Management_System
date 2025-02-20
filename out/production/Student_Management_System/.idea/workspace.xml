@@ -7,6 +7,9 @@
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/StudentSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +84,21 @@
       <workItem from="1740009135457" duration="149000" />
       <workItem from="1740034663469" duration="122000" />
       <workItem from="1740034793038" duration="2408000" />
-      <workItem from="1740057271428" duration="2225000" />
+      <workItem from="1740057271428" duration="9652000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
