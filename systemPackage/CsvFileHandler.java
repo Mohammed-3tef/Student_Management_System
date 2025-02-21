@@ -5,7 +5,6 @@ import java.util.Scanner;
     // --------------------------------- CSV FILE HANDLER CLASS ---------------------------------
 
 public class CsvFileHandler {
-    private static String INPUT_CSV_FILE;
     private static final String OUTPUT_CSV_FILE = "Final_Students.csv";
 
     public static Student fromCSV(String csvLine) {
@@ -25,12 +24,13 @@ public class CsvFileHandler {
     public static StudentSystem readCsvFile() {
         StudentSystem students = new StudentSystem();
         Scanner scanner = new Scanner(System.in);
-        INPUT_CSV_FILE = InputValidator.getFilePath(scanner, ".csv");
+        String INPUT_CSV_FILE = InputValidator.getFilePath(scanner, ".csv");
 
 
         try (BufferedReader reader = new BufferedReader(new FileReader(INPUT_CSV_FILE))) {
             String line;
             boolean firstLine = true;
+
             while ((line = reader.readLine()) != null) {
                 if (firstLine) {
                     firstLine = false;
@@ -39,20 +39,18 @@ public class CsvFileHandler {
                 Student student = fromCSV(line);
                 boolean isUnique = true;
                 for (Student s : students.getStudentList()) {
-                    if (s.ID == student.ID) {
-                        System.out.println("ID already exists. Please enter a unique ID.");
+                    if (s.ID == student.ID || s.name.equals(student.name)) {
                         isUnique = false;
-                    }
-                    if (s.name.equals(student.name)) {
-                        System.out.println("Name already exists. Please enter a unique name.");
-                        isUnique = false;
+                        break;
                     }
                 }
+
                 if (isUnique) {
                     if (student.year.equals("First") || student.year.equals("Second")) student.department = "General";
                     students.addStudent(student.name, student.ID, student.age, student.GPA, student.year, student.department, true);
                 }
             }
+
             System.out.println("\nCSV file read successfully.\n");
         }
         catch (IOException e) {

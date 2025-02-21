@@ -44,7 +44,7 @@ public class App {
 
                         switch (addChoice) {
                             case 1:
-                                system = CsvFileHandler.readCsvFile();
+                                system.mergeStudentSystem(CsvFileHandler.readCsvFile());
                                 break;
 
                             case 2:

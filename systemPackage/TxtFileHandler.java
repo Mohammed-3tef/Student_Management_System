@@ -19,61 +19,88 @@ public class TxtFileHandler {
             students.sortStudentsBy("GPA");
             ArrayList<Student> studentList = students.getStudentList();
 
-            writer.write("\nTotal number of students: " + studentList.size());
+            writer.write("\nThe Total number of students: " + studentList.size());
             writer.write("\n\n");
 
             double sum = 0;
             for (Student student : studentList) {
                 sum += student.GPA;
             }
-            writer.write("Average GPA: " + sum / studentList.size());
+            writer.write("The Average GPA: " + String.format("%.2f" ,sum / studentList.size()));
             writer.write("\n\n");
 
-            int first = 0, second = 0, third = 0, fourth = 0;
+            int totalFirst = 0, totalSecond = 0, totalThird = 0, totalFourth = 0;
+            int successfulFirst = 0, successfulSecond = 0, successfulThird = 0, successfulFourth = 0;
             for (Student student : studentList) {
                 switch (student.year) {
-                    case "First" -> first++;
-                    case "Second" -> second++;
-                    case "Third" -> third++;
-                    case "Fourth" -> fourth++;
+                    case "First" -> {
+                        totalFirst++;
+                        if (student.GPA >= 2.0) successfulFirst++;
+                    }
+                    case "Second" -> {
+                        totalSecond++;
+                        if (student.GPA >= 2.0) successfulSecond++;
+                    }
+                    case "Third" -> {
+                        totalThird++;
+                        if (student.GPA >= 2.0) successfulThird++;
+                    }
+                    case "Fourth" -> {
+                        totalFourth++;
+                        if (student.GPA >= 2.0) successfulFourth++;
+                    }
                 }
             }
             writer.write("Year-wise Student Count:");
-            writer.write("\n - First Year: " + first);
-            writer.write("\n - Second Year: " + second);
-            writer.write("\n - Third Year: " + third);
-            writer.write("\n - Fourth Year: " + fourth);
+            writer.write("\n - First Year: " + totalFirst + ", With Success rate of " + String.format("%.3f" ,successfulFirst * 100.0 / totalFirst) + "%");
+            writer.write("\n - Second Year: " + totalSecond + ", With Success rate of " + String.format("%.3f" ,successfulSecond * 100.0 / totalSecond) + "%");
+            writer.write("\n - Third Year: " + totalThird + ", With Success rate of " + String.format("%.3f" ,successfulThird * 100.0 / totalThird) + "%");
+            writer.write("\n - Fourth Year: " + totalFourth + ", With Success rate of " + String.format("%.3f" ,successfulFourth * 100.0 / totalFourth) + "%");
             writer.write("\n\n");
 
-            writer.write("Top 5 Performing Students:");
-            int count = 1;
-            for (Student student : studentList) {
-                if (student.GPA < 2.0 || count > 5) break;
-                writer.write("\n " + (count++) + ". ");
-                writer.write(student.name);
-                writer.write(", ID: " + student.ID);
-                writer.write(", Age: " + student.age);
-                writer.write(", GPA: " + student.GPA);
-                writer.write(", Year: " + student.year);
-                writer.write(", Department: " + student.department);
-            }
-            writer.write("\n\n");
-
-            writer.write("Failing students who have GPA less than 2.0:");
-            boolean isFailing = false;
-            for (Student student : studentList) {
-                if (student.GPA < 2.0) {
-                    isFailing = true;
-                    writer.write("\n - " + student.name);
-                    writer.write(", ID: " + student.ID);
-                    writer.write(", Age: " + student.age);
-                    writer.write(", GPA: " + student.GPA);
-                    writer.write(", Year: " + student.year);
-                    writer.write(", Department: " + student.department);
+            writer.write("------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------\n\n");
+            int numberOfYears = 0;
+            String [] years = {"First", "Second", "Third", "Fourth"};
+            while (numberOfYears < 4) {
+                writer.write(years[numberOfYears] + " Year:\n");
+                int count = 1;
+                for (Student student : studentList) {
+                    if (student.year.equals(years[numberOfYears]) && count <= 5) {
+                        writer.write(" " + (count++) + ". ");
+                        writer.write(student.name);
+                        writer.write(", ID: " + student.ID);
+                        writer.write(", Age: " + student.age);
+                        writer.write(", GPA: " + student.GPA);
+                        writer.write(", Year: " + student.year);
+                        writer.write(", Department: " + student.department);
+                        writer.write("\n");
+                    }
                 }
+                numberOfYears++;
+                writer.write("\n");
             }
-            if (!isFailing) writer.write(" No failing students found!\n");
-            else writer.write("\n\n");
+
+            writer.write("-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------\n\n");
+            numberOfYears = 0;
+            while (numberOfYears < 4) {
+                writer.write(years[numberOfYears] + " Year:\n");
+                boolean isFailing = false;
+                for (Student student : studentList) {
+                    if (student.year.equals(years[numberOfYears]) && student.GPA < 2.0) {
+                        isFailing = true;
+                        writer.write(" - " + student.name);
+                        writer.write(", ID: " + student.ID);
+                        writer.write(", Age: " + student.age);
+                        writer.write(", GPA: " + student.GPA);
+                        writer.write(", Year: " + student.year);
+                        writer.write(", Department: " + student.department);
+                        writer.write("\n");
+                    }
+                }
+                if (!isFailing) writer.write(" No failing students found!\n");
+                else writer.write("\n");
+                numberOfYears++;
+            }
 
             writer.flush();
             System.out.println("\nTxt file written successfully.");

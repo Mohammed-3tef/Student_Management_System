@@ -6,10 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Students.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/students.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/StudentSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +95,8 @@
       <workItem from="1740067068242" duration="118000" />
       <workItem from="1740068628929" duration="289000" />
       <workItem from="1740069110923" duration="377000" />
+      <workItem from="1740129166422" duration="3784000" />
+      <workItem from="1740140157674" duration="5407000" />
     </task>
     <servers />
   </component>

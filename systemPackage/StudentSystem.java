@@ -10,6 +10,35 @@ public class StudentSystem {
     public StudentSystem() {this.studentList = new ArrayList<>();}
     public ArrayList<Student> getStudentList() {return studentList;}
 
+    // Method to merge another StudentSystem into this one
+    public void mergeStudentSystem(StudentSystem otherSystem) {
+        int nonUniqueID = 0, nonUniqueName = 0, oldSize = this.studentList.size();
+        for (Student student : otherSystem.getStudentList()) {
+            boolean isFound = false;
+            for (Student student1 : this.studentList) {
+                if (student1.ID == student.ID) {
+                    nonUniqueID++;
+                    isFound = true;
+                    break;
+                }
+                if (student1.name.equals(student.name)) {
+                    nonUniqueName++;
+                    isFound = true;
+                    break;
+                }
+            }
+            if (!isFound) this.studentList.add(student);
+        }
+
+        if (nonUniqueID > 0) System.out.println(nonUniqueID + " students with non-unique ID(s) were not added to the system.");
+        if (nonUniqueName > 0) System.out.println(nonUniqueName + " students with non-unique name(s) were not added to the system.");
+
+        if (oldSize == 0) System.out.println("Student system Added successfully!");
+        else if (this.studentList.size() > oldSize) System.out.println("Student system merged successfully!");
+        else System.out.println("No new students were added to the system.");
+        System.out.println();
+    }
+
     // Sort Students
     public void sortStudentsBy(String sortBy) {
         switch (sortBy) {
@@ -190,7 +219,7 @@ public class StudentSystem {
 
     // Count the Total Number of Students
     public void countTotalStudents() {
-        System.out.println("Total number of students: " + this.studentList.size());
+        System.out.println("The Total number of students: " + this.studentList.size());
         System.out.println();
     }
 
@@ -200,33 +229,38 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             sum += student.GPA;
         }
-        System.out.println("Average GPA: " + sum / this.studentList.size());
+        System.out.println("The Average GPA: " + String.format("%.2f" ,sum / this.studentList.size()));
         System.out.println();
     }
 
     // Display Top 5 Performing Students
     public void displayTop5() {
         sortStudentsBy("GPA");
-
-        System.out.println("Top 5 Performing Students:");
-        int count = 1;
-        for (Student student : this.studentList) {
-            if (student.GPA < 2.0 || count > 5) break;
-            System.out.print(" " + (count++) + ". ");
-            System.out.print(student.name);
-            System.out.print(", ID: " + student.ID);
-            System.out.print(", Age: " + student.age);
-            System.out.print(", GPA: " + student.GPA);
-            System.out.print(", Year: " + student.year);
-            System.out.println(", Department: " + student.department);
+        System.out.println("------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------\n");
+        int numberOfYears = 0;
+        String [] years = {"First", "Second", "Third", "Fourth"};
+        while (numberOfYears < 4) {
+            System.out.println(years[numberOfYears] + " Year:");
+            int count = 1;
+            for (Student student : this.studentList) {
+                if (student.year.equals(years[numberOfYears]) && count <= 5) {
+                    System.out.print(" " + (count++) + ". ");
+                    System.out.print(student.name);
+                    System.out.print(", ID: " + student.ID);
+                    System.out.print(", Age: " + student.age);
+                    System.out.print(", GPA: " + student.GPA);
+                    System.out.print(", Year: " + student.year);
+                    System.out.println(", Department: " + student.department);
+                }
+            }
+            numberOfYears++;
+            System.out.println();
         }
-        System.out.println();
     }
-
 
     // Display Failing Students
     public void displayFailingStudents() {
-        System.out.println("Failing students who have GPA less than 2.0:");
+        System.out.println("-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------\n");
         boolean isFailing = false;
         for (Student student : this.studentList) {
             if (student.GPA < 2.0) {
@@ -243,22 +277,35 @@ public class StudentSystem {
         else System.out.println();
     }
 
-    // Count Students by Year
+    // Count Students by Year and Calculate Success Rate
     public void countStudentsByYear() {
-        int first = 0, second = 0, third = 0, fourth = 0;
+        int totalFirst = 0, totalSecond = 0, totalThird = 0, totalFourth = 0;
+        int successfulFirst = 0, successfulSecond = 0, successfulThird = 0, successfulFourth = 0;
         for (Student student : studentList) {
             switch (student.year) {
-                case "First" -> first++;
-                case "Second" -> second++;
-                case "Third" -> third++;
-                case "Fourth" -> fourth++;
+                case "First" -> {
+                    totalFirst++;
+                    if (student.GPA >= 2.0) successfulFirst++;
+                }
+                case "Second" -> {
+                    totalSecond++;
+                    if (student.GPA >= 2.0) successfulSecond++;
+                }
+                case "Third" -> {
+                    totalThird++;
+                    if (student.GPA >= 2.0) successfulThird++;
+                }
+                case "Fourth" -> {
+                    totalFourth++;
+                    if (student.GPA >= 2.0) successfulFourth++;
+                }
             }
         }
         System.out.println("Year-wise Student Count:");
-        System.out.println(" - First Year: " + first);
-        System.out.println(" - Second Year: " + second);
-        System.out.println(" - Third Year: " + third);
-        System.out.println(" - Fourth Year: " + fourth);
+        System.out.println(" - First Year: " + totalFirst + ", With Success rate of " + String.format("%.3f" ,successfulFirst * 100.0 / totalFirst) + "%");
+        System.out.println(" - Second Year: " + totalSecond + ", With Success rate of " + String.format("%.3f" ,successfulSecond * 100.0 / totalSecond) + "%");
+        System.out.println(" - Third Year: " + totalThird + ", With Success rate of " + String.format("%.3f" ,successfulThird * 100.0 / totalThird) + "%");
+        System.out.println(" - Fourth Year: " + totalFourth + ", With Success rate of " + String.format("%.3f" ,successfulFourth * 100.0 / totalFourth) + "%");
         System.out.println();
     }
 
