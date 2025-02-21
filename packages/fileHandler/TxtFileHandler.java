@@ -1,7 +1,9 @@
-package systemPackage;
+package packages.fileHandler;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import packages.system.*;
 
     // --------------------------------- TXT FILE HANDLER CLASS ---------------------------------
 

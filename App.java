@@ -1,5 +1,6 @@
-import systemPackage.*;
 import java.util.*;
+import packages.system.*;
+import packages.fileHandler.*;
 
     // ---------------------------------------------- MAIN FUNCTION ----------------------------------------------
 

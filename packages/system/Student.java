@@ -1,4 +1,4 @@
-package systemPackage;
+package packages.system;
 
     // ---------------------------------------------- STUDENT CLASS ----------------------------------------------
 

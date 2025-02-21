@@ -1,6 +1,8 @@
-package systemPackage;
+package packages.fileHandler;
+
 import java.io.*;
 import java.util.Scanner;
+import packages.system.*;
 
     // --------------------------------- CSV FILE HANDLER CLASS ---------------------------------
 

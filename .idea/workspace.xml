@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/InputValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +103,7 @@
       <workItem from="1740150180670" duration="1433000" />
       <workItem from="1740151668651" duration="12000" />
       <workItem from="1740151844328" duration="123000" />
+      <workItem from="1740152628246" duration="1586000" />
     </task>
     <servers />
   </component>

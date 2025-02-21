@@ -1,4 +1,4 @@
-package systemPackage;
+package packages.system;
 import java.util.Scanner;
 
     // ---------------------------------------------- INPUT VALIDATION FUNCTIONS ----------------------------------------------

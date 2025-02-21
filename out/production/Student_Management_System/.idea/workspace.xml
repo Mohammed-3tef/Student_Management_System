@@ -6,15 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Students.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/StudentSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/InputValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +58,16 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/fr/OneDrive/Desktop/Assignment El-Ramly/Assignment 1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -94,7 +95,12 @@
       <workItem from="1740068628929" duration="289000" />
       <workItem from="1740069110923" duration="377000" />
       <workItem from="1740129166422" duration="3784000" />
-      <workItem from="1740140157674" duration="792000" />
+      <workItem from="1740140157674" duration="5407000" />
+      <workItem from="1740146851415" duration="2291000" />
+      <workItem from="1740150180670" duration="1433000" />
+      <workItem from="1740151668651" duration="12000" />
+      <workItem from="1740151844328" duration="123000" />
+      <workItem from="1740152628246" duration="1536000" />
     </task>
     <servers />
   </component>
@@ -110,5 +116,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
