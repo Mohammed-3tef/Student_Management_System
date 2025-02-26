@@ -9,6 +9,7 @@ import packages.system.*;
 public class CsvFileHandler {
     private static final String OUTPUT_CSV_FILE = "Final_Students.csv";
 
+    // Convert a CSV line to a Student object
     public static Student fromCSV(String csvLine) {
         csvLine = csvLine.replaceAll("\"", "");
         String[] parts = csvLine.split(",");
@@ -16,13 +17,13 @@ public class CsvFileHandler {
         return new Student(
                 Integer.parseInt(parts[0]),     // ID
                 parts[1],                       // Name
-                Integer.parseInt(parts[2]),     // Age
-                Double.parseDouble(parts[3]),   // GPA
-                parts[4],                       // Year
-                parts[5]                        // Department
+                Double.parseDouble(parts[2]),   // GPA
+                parts[3],                       // Year
+                parts[4]                        // Department
         );
     }
 
+    // Read the student system from a csv file
     public static StudentSystem readCsvFile() {
         StudentSystem students = new StudentSystem();
         Scanner scanner = new Scanner(System.in);
@@ -49,7 +50,7 @@ public class CsvFileHandler {
 
                 if (isUnique) {
                     if (student.year.equals("First") || student.year.equals("Second")) student.department = "General";
-                    students.addStudent(student.name, student.ID, student.age, student.GPA, student.year, student.department, true);
+                    students.addStudent(student.name, student.ID, student.GPA, student.year, student.department, true);
                 }
             }
 
@@ -62,6 +63,7 @@ public class CsvFileHandler {
         return students;
     }
 
+    // Write the student system to a csv file
     public static void writeCsvFile(StudentSystem students) {
         try (FileWriter writer = new FileWriter(OUTPUT_CSV_FILE)) {
             if (students.getStudentList().isEmpty()) {
@@ -71,11 +73,10 @@ public class CsvFileHandler {
 
             students.sortStudentsBy("ID");
 
-            writer.write("\"ID\",\"Name\",\"Age\",\"GPA\",\"Year\",\"Department\"\n");
+            writer.write("\"ID\",\"Name\",\"GPA\",\"Year\",\"Department\"\n");
             for (Student student : students.getStudentList()) {
                 writer.write("\"" + student.ID + "\",");
                 writer.write("\"" + student.name + "\",");
-                writer.write("\"" + student.age + "\",");
                 writer.write("\"" + student.GPA + "\",");
                 writer.write("\"" + student.year + "\",");
                 writer.write("\"" + student.department + "\"\n");

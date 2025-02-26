@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class InputValidator {
 
+    // Get the file path from the user
     public static String getFilePath(Scanner scanner, String extension) {
         String filePath;
         while (true) {
@@ -16,6 +17,7 @@ public class InputValidator {
         return filePath;
     }
 
+    // Validate the input name
     public static String inputValidName(Scanner scanner) {
         String name;
         while (true) {
@@ -27,6 +29,7 @@ public class InputValidator {
         return name;
     }
 
+    // Validate the input ID
     public static int inputValidID(Scanner scanner) {
         System.out.print("Enter Student's ID: ");
         String ID = scanner.nextLine();
@@ -40,6 +43,7 @@ public class InputValidator {
         return Integer.parseInt(ID);
     }
 
+    // Check if the name is unique
     public static String addUniqueName(Scanner scanner, StudentSystem system) {
         String newName = inputValidName(scanner);
         while (true) {
@@ -57,6 +61,7 @@ public class InputValidator {
         return newName;
     }
 
+    // Check if the ID is unique
     public static int addUniqueID(Scanner scanner, StudentSystem system) {
         int newID = inputValidID(scanner);
         while (true) {
@@ -74,19 +79,7 @@ public class InputValidator {
         return newID;
     }
 
-    public static int inputValidAge(Scanner scanner) {
-        System.out.print("Enter Student's Age: ");
-        String age = scanner.nextLine();
-
-        while (!age.matches("\\d+") || Integer.parseInt(age) < 0 || Integer.parseInt(age) > 100) {
-            System.out.println("Invalid input. Please enter a valid age.");
-            System.out.print("Enter Student's Age: ");
-            age = scanner.nextLine();
-        }
-
-        return Integer.parseInt(age);
-    }
-
+    // Validate the input GPA
     public static double inputValidGPA(Scanner scanner) {
         System.out.print("Enter Student's GPA (0.0 - 4.0): ");
         String GPA = scanner.nextLine();
@@ -100,6 +93,7 @@ public class InputValidator {
         return Double.parseDouble(GPA);
     }
 
+    // Validate the input year
     public static String inputValidYear(Scanner scanner) {
         System.out.print("Enter Student's Year (First, Second, Third, Fourth): ");
 
@@ -113,6 +107,7 @@ public class InputValidator {
         return year;
     }
 
+    // Validate the input department
     public static String inputValidDepartment(Scanner scanner) {
         System.out.print("Enter Student's Department (CS - IS - AI - IT - DS - General): ");
 
@@ -126,6 +121,7 @@ public class InputValidator {
         return department;
     }
 
+    // Validate the choice input
     public static int inputValidChoice(Scanner scanner) {
         System.out.print("Enter your choice: ");
         String choice = scanner.nextLine();

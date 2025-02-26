@@ -39,7 +39,7 @@ public class StudentSystem {
         System.out.println();
     }
 
-    // Sort Students
+    // Sort Students by GPA, ID, Name, Department, or Year
     public void sortStudentsBy(String sortBy) {
         switch (sortBy) {
             case "GPA" ->
@@ -61,11 +61,11 @@ public class StudentSystem {
         }
     }
 
-    public void addStudent(String newName, int newID, int newAge, double newGPA, String newYear, String newDepartment, boolean byCSV) {
+    // Add Student to the System by Providing Information or by CSV File
+    public void addStudent(String newName, int newID, double newGPA, String newYear, String newDepartment, boolean byCSV) {
         Student newStudent = new Student();
         newStudent.name = newName;
         newStudent.ID = newID;
-        newStudent.age = newAge;
         newStudent.GPA = newGPA;
         newStudent.year = newYear;
         newStudent.department = newDepartment;
@@ -73,6 +73,7 @@ public class StudentSystem {
         if (!byCSV) System.out.println("Student added successfully!\n");
     }
 
+    // Remove Student by ID
     public void removeStudentByID(int ID) {
         for (int i = 0; i < this.studentList.size(); i++) {
             if (this.studentList.get(i).ID == ID) {
@@ -85,11 +86,10 @@ public class StudentSystem {
     }
 
     // Update Student Information Using ID
-    public void updateStudentByID(int ID, String newName, int newAge, double newGPA, String newYear, String newDepartment) {
+    public void updateStudentByID(int ID, String newName, double newGPA, String newYear, String newDepartment) {
         for (Student student : this.studentList) {
             if (student.ID == ID) {
                 if (newName != null) student.name = newName;
-                if (newAge != -1) student.age = newAge;
                 if (newGPA != -1) student.GPA = newGPA;
                 if (newYear != null) student.year = newYear;
                 if (newDepartment != null) student.department = newDepartment;
@@ -106,19 +106,18 @@ public class StudentSystem {
         for (Student student : this.studentList) {
             if (student.ID == ID) {
                 System.out.println("Student found!");
-                System.out.print("Name: " + student.name);
-                System.out.print(", Age: " + student.age);
-                System.out.print(", GPA: " + student.GPA);
-                System.out.print(", Year: " + student.year);
-                System.out.println(", Department: " + student.department);
-                System.out.println();
+                System.out.printf("%-20s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                        "Name", "ID", "GPA", "Year", "Dept");
+                System.out.println("------------------------------------------------------------------");
+                System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                        student.name, student.ID, student.GPA, student.year, student.department);
                 return;
             }
         }
         System.out.println("Student not found!\n");
     }
 
-    // List and Sort All Students
+    // List and Sort All Students by GPA, ID, Name, Year, or Department
     public void listAndSortAllStudents(String sortBy) {
         if (this.studentList.isEmpty()) {
             System.out.println("No students found!\n");
@@ -134,49 +133,33 @@ public class StudentSystem {
         }
 
         System.out.println("\nList of Students:");
+        System.out.printf("%-20s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                "Name", "ID", "GPA", "Year", "Department");
+        System.out.println("---------------------------------------------------------------------");
+
         for (Student student : this.studentList) {
-            System.out.print(" - " + student.name);
-            System.out.print(", ID: " + student.ID);
-            System.out.print(", Age: " + student.age);
-            System.out.print(", GPA: " + student.GPA);
-            System.out.print(", Year: " + student.year);
-            System.out.println(", Department: " + student.department);
+            System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                    student.name, student.ID, student.GPA, student.year, student.department);
         }
         System.out.println();
-    }
-
-    // Filter Students by Age
-    public void filterByAge(int age) {
-        System.out.println("Students with age of " + age + ":");
-        boolean isFound = false;
-        for (Student student : this.studentList) {
-            if (student.age == age) {
-                isFound = true;
-                System.out.print(" - " + student.name);
-                System.out.print(", ID: " + student.ID);
-                System.out.print(", GPA: " + student.GPA);
-                System.out.print(", Year: " + student.year);
-                System.out.println(", Department: " + student.department);
-            }
-        }
-        if (!isFound) System.out.println("No students found with age of " + age + "!\n");
-        else System.out.println();
     }
 
     // Filter Students by GPA
     public void filterByGPA(double GPA) {
         System.out.println("Students with GPA of " + GPA + ":");
+        System.out.printf("%-20s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                "Name", "ID", "GPA", "Year", "Dept");
+        System.out.println("------------------------------------------------------------------");
+
         boolean isFound = false;
         for (Student student : this.studentList) {
             if (student.GPA == GPA) {
                 isFound = true;
-                System.out.print(" - " + student.name);
-                System.out.print(", ID: " + student.ID);
-                System.out.print(", Age: " + student.age);
-                System.out.print(", Year: " + student.year);
-                System.out.println(", Department: " + student.department);
+                System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                        student.name, student.ID, student.GPA, student.year, student.department);
             }
         }
+
         if (!isFound) System.out.println("No students found with GPA of " + GPA + "!\n");
         else System.out.println();
     }
@@ -184,17 +167,19 @@ public class StudentSystem {
     // Filter Students by Year
     public void filterByYear(String year) {
         System.out.println("Students in " + year + " year:");
+        System.out.printf("%-20s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                "Name", "ID", "GPA", "Year", "Dept");
+        System.out.println("------------------------------------------------------------------");
+
         boolean isFound = false;
         for (Student student : this.studentList) {
             if (student.year.equals(year)) {
                 isFound = true;
-                System.out.print(" - " + student.name);
-                System.out.print(", ID: " + student.ID);
-                System.out.print(", Age: " + student.age);
-                System.out.print(", GPA: " + student.GPA);
-                System.out.println(", Department: " + student.department);
+                System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                        student.name, student.ID, student.GPA, student.year, student.department);
             }
         }
+
         if (!isFound) System.out.println("No students found in " + year + " year!\n");
         else System.out.println();
     }
@@ -202,17 +187,19 @@ public class StudentSystem {
     // Filter Students by Department
     public void filterByDepartment(String department) {
         System.out.println("Students in " + department + " department:");
+        System.out.printf("%-20s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                "Name", "ID", "GPA", "Year", "Dept");
+        System.out.println("------------------------------------------------------------------");
+
         boolean isFound = false;
         for (Student student : this.studentList) {
             if (student.department.equals(department)) {
                 isFound = true;
-                System.out.print(" - " + student.name);
-                System.out.print(", ID: " + student.ID);
-                System.out.print(", Age: " + student.age);
-                System.out.print(", GPA: " + student.GPA);
-                System.out.println(", Year: " + student.year);
+                System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                        student.name, student.ID, student.GPA, student.year, student.department);
             }
         }
+
         if (!isFound) System.out.println("No students found in " + department + " department!\n");
         else System.out.println();
     }
@@ -239,48 +226,60 @@ public class StudentSystem {
         System.out.println("------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------\n");
         int numberOfYears = 0;
         String [] years = {"First", "Second", "Third", "Fourth"};
-        while (numberOfYears < 4) {
+        while (numberOfYears < 4) {     // Loop through all years to find the top 5 students.
             System.out.println(years[numberOfYears] + " Year:");
             int count = 1;
+            boolean isFound = false;
+            System.out.printf(" %-23s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                    "Name", "ID", "GPA", "Year", "Department");
+            System.out.println("-------------------------------------------------------------------------");
             for (Student student : this.studentList) {
-                if (student.year.equals(years[numberOfYears]) && count <= 5) {
+                if (student.year.equals(years[numberOfYears]) && count <= 5 && student.GPA >= 2.0) {
+                    isFound = true;
                     System.out.print(" " + (count++) + ". ");
-                    System.out.print(student.name);
-                    System.out.print(", ID: " + student.ID);
-                    System.out.print(", Age: " + student.age);
-                    System.out.print(", GPA: " + student.GPA);
-                    System.out.print(", Year: " + student.year);
-                    System.out.println(", Department: " + student.department);
+                    System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                            student.name, student.ID, student.GPA, student.year, student.department);
                 }
             }
             numberOfYears++;
-            System.out.println();
+            if (!isFound) System.out.println(" No students found!\n");    // If there is no successful student in that year.
+            else System.out.println();
         }
     }
 
-    // Display Failing Students
+    // Display Failing Students (GPA less than 2.0)
     public void displayFailingStudents() {
         System.out.println("-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------\n");
-        boolean isFailing = false;
-        for (Student student : this.studentList) {
-            if (student.GPA < 2.0) {
-                isFailing = true;
-                System.out.print(" - " + student.name);
-                System.out.print(", ID: " + student.ID);
-                System.out.print(", Age: " + student.age);
-                System.out.print(", GPA: " + student.GPA);
-                System.out.print(", Year: " + student.year);
-                System.out.println(", Department: " + student.department);
+        int numberOfYears = 0;
+        String [] years = {"First", "Second", "Third", "Fourth"};
+        while (numberOfYears < 4) {     // Loop through all years to find failing students.
+
+            System.out.println(years[numberOfYears] + " Year:");
+            System.out.printf(" %-20s  |  %-8s  |  %-4s  |  %-6s  |  %-5s%n",
+                    "Name", "ID", "GPA", "Year", "Department");
+            System.out.println("----------------------------------------------------------------------");
+
+            boolean isFailing = false;
+            for (Student student : this.studentList) {
+                if (student.year.equals(years[numberOfYears]) && student.GPA < 2.0) {
+                    isFailing = true;
+                    System.out.printf(" %-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
+                            student.name, student.ID, student.GPA, student.year, student.department);
+                }
             }
+
+            numberOfYears++;
+            if (!isFailing) System.out.println(" No failing students found!\n");    // If no failing students found in that year
+            else System.out.println();
         }
-        if (!isFailing) System.out.println(" No failing students found!\n");
-        else System.out.println();
+        System.out.println();
     }
 
-    // Count Students by Year and Calculate Success Rate
+    // Count Students by Year and Calculate Success Rate (GPA >= 2.0).
     public void countStudentsByYear() {
         int totalFirst = 0, totalSecond = 0, totalThird = 0, totalFourth = 0;
         int successfulFirst = 0, successfulSecond = 0, successfulThird = 0, successfulFourth = 0;
+
         for (Student student : studentList) {
             switch (student.year) {
                 case "First" -> {
@@ -301,6 +300,7 @@ public class StudentSystem {
                 }
             }
         }
+
         System.out.println("Year-wise Student Count:");
         System.out.println(" - First Year: " + totalFirst + ", With Success rate of " + String.format("%.3f" ,successfulFirst * 100.0 / totalFirst) + "%");
         System.out.println(" - Second Year: " + totalSecond + ", With Success rate of " + String.format("%.3f" ,successfulSecond * 100.0 / totalSecond) + "%");

@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/CsvFileHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/InputValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/StudentSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/systemPackage/TxtFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/fr/OneDrive/Desktop/Assignment El-Ramly/Assignment 1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/fr/OneDrive/Desktop/Assignment El-Ramly/Assignment 1/Student_Management_System&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,7 +62,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -100,7 +95,11 @@
       <workItem from="1740150180670" duration="1433000" />
       <workItem from="1740151668651" duration="12000" />
       <workItem from="1740151844328" duration="123000" />
-      <workItem from="1740152628246" duration="1536000" />
+      <workItem from="1740152628246" duration="1586000" />
+      <workItem from="1740162711427" duration="611000" />
+      <workItem from="1740226925226" duration="1579000" />
+      <workItem from="1740229369554" duration="48000" />
+      <workItem from="1740318280626" duration="327000" />
     </task>
     <servers />
   </component>

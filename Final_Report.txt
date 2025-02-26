@@ -13,50 +13,66 @@ Year-wise Student Count:
 ------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------
 
 First Year:
- 1. Fatima Ali, ID: 20231149, Age: 18, GPA: 3.9, Year: First, Department: General
- 2. Hala Mostafa, ID: 20231173, Age: 18, GPA: 3.8, Year: First, Department: General
- 3. Alaa Reda, ID: 20231157, Age: 19, GPA: 3.8, Year: First, Department: General
- 4. Laila Mostafa, ID: 20231147, Age: 19, GPA: 3.7, Year: First, Department: General
- 5. Farida Tamer, ID: 20232006, Age: 18, GPA: 3.7, Year: First, Department: General
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. Fatima Ali            |  20231149  |  3.90  |  First   |  General
+ 2. Hala Mostafa          |  20231173  |  3.80  |  First   |  General
+ 3. Alaa Reda             |  20231157  |  3.80  |  First   |  General
+ 4. Laila Mostafa         |  20231147  |  3.70  |  First   |  General
+ 5. Farida Tamer          |  20232006  |  3.70  |  First   |  General
 
 Second Year:
- 1. Ahmed Yasser, ID: 20231144, Age: 20, GPA: 3.8, Year: Second, Department: General
- 2. Nadia Helal, ID: 20232014, Age: 20, GPA: 3.8, Year: Second, Department: General
- 3. Ehab Reda, ID: 20232005, Age: 20, GPA: 3.5, Year: Second, Department: General
- 4. Youssef Hassan, ID: 20231154, Age: 20, GPA: 3.4, Year: Second, Department: General
- 5. Tarek Ehab, ID: 20231156, Age: 20, GPA: 3.4, Year: Second, Department: General
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. Ahmed Yasser          |  20231144  |  3.80  |  Second  |  General
+ 2. Nadia Helal           |  20232014  |  3.80  |  Second  |  General
+ 3. Ehab Reda             |  20232005  |  3.50  |  Second  |  General
+ 4. Youssef Hassan        |  20231154  |  3.40  |  Second  |  General
+ 5. Tarek Ehab            |  20231156  |  3.40  |  Second  |  General
 
 Third Year:
- 1. Aya Mostafa, ID: 20231159, Age: 21, GPA: 3.9, Year: Third, Department: IT
- 2. Tamer Essam, ID: 20231158, Age: 20, GPA: 3.6, Year: Third, Department: IS
- 3. Hana Mostafa, ID: 20232008, Age: 19, GPA: 3.6, Year: Third, Department: DS
- 4. Farah Nabil, ID: 20231175, Age: 21, GPA: 3.5, Year: Third, Department: DS
- 5. Amr elDahshan, ID: 20231142, Age: 19, GPA: 3.3, Year: Third, Department: DS
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. Aya Mostafa           |  20231159  |  3.90  |  Third   |  IT   
+ 2. Tamer Essam           |  20231158  |  3.60  |  Third   |  IS   
+ 3. Hana Mostafa          |  20232008  |  3.60  |  Third   |  DS   
+ 4. Farah Nabil           |  20231175  |  3.50  |  Third   |  DS   
+ 5. Amr elDahshan         |  20231142  |  3.30  |  Third   |  DS   
 
 Fourth Year:
- 1. Carla Nader, ID: 20232003, Age: 22, GPA: 3.9, Year: Fourth, Department: DS
- 2. Youssef Mohamed, ID: 20231170, Age: 22, GPA: 3.7, Year: Fourth, Department: CS
- 3. Esraa Emary, ID: 20231182, Age: 22, GPA: 3.6, Year: Fourth, Department: AI
- 4. Omar Tarek, ID: 20231146, Age: 22, GPA: 3.5, Year: Fourth, Department: CS
- 5. Ziad Hassan, ID: 20231176, Age: 22, GPA: 3.4, Year: Fourth, Department: CS
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. Carla Nader           |  20232003  |  3.90  |  Fourth  |  DS   
+ 2. Youssef Mohamed       |  20231170  |  3.70  |  Fourth  |  CS   
+ 3. Esraa Emary           |  20231182  |  3.60  |  Fourth  |  AI   
+ 4. Omar Tarek            |  20231146  |  3.50  |  Fourth  |  CS   
+ 5. Ziad Hassan           |  20231176  |  3.40  |  Fourth  |  CS   
 
 -------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------
 
 First Year:
- - Samar Nabil, ID: 20231166, Age: 22, GPA: 1.7, Year: First, Department: General
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ Samar Nabil           |  20231166  |  1.70  |  First   |  General
 
 Second Year:
- - Ali Hassan, ID: 20231163, Age: 19, GPA: 1.8, Year: Second, Department: General
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ Ali Hassan            |  20231163  |  1.80  |  Second  |  General
 
 Third Year:
- - Tarek Mounir, ID: 20231181, Age: 21, GPA: 1.9, Year: Third, Department: CS
- - Sarah Khalil, ID: 20231188, Age: 21, GPA: 1.7, Year: Third, Department: DS
- - Bassem Ahmed, ID: 20231172, Age: 21, GPA: 1.6, Year: Third, Department: IS
- - Mona Hafez, ID: 20231164, Age: 20, GPA: 1.5, Year: Third, Department: CS
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ Tarek Mounir          |  20231181  |  1.90  |  Third   |  CS   
+ Sarah Khalil          |  20231188  |  1.70  |  Third   |  DS   
+ Bassem Ahmed          |  20231172  |  1.60  |  Third   |  IS   
+ Mona Hafez            |  20231164  |  1.50  |  Third   |  CS   
 
 Fourth Year:
- - Hatem Omar, ID: 20231165, Age: 21, GPA: 1.9, Year: Fourth, Department: AI
- - Yasmin Ehab, ID: 20231186, Age: 22, GPA: 1.9, Year: Fourth, Department: CS
- - Gamal Youssef, ID: 20232007, Age: 22, GPA: 1.9, Year: Fourth, Department: AI
- - Qasim Hatem, ID: 20232017, Age: 22, GPA: 1.7, Year: Fourth, Department: IS
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ Hatem Omar            |  20231165  |  1.90  |  Fourth  |  AI   
+ Yasmin Ehab           |  20231186  |  1.90  |  Fourth  |  CS   
+ Gamal Youssef         |  20232007  |  1.90  |  Fourth  |  AI   
+ Qasim Hatem           |  20232017  |  1.70  |  Fourth  |  IS   
 

@@ -29,7 +29,7 @@ public class App {
             System.out.println();
 
             switch (choice) {
-                case 1:
+                case 1:     // Add Student
                     while (true) {
                         System.out.println("Choose an option to add student:");
                         System.out.println(" 1. Add Student from CSV File.");
@@ -38,101 +38,93 @@ public class App {
 
                         int addChoice = InputValidator.inputValidChoice(scanner);
 
-                        if (addChoice == 0) {
+                        if (addChoice == 0) {       // Exit Add Student
                             System.out.println();
                             break;
                         }
 
                         switch (addChoice) {
-                            case 1:
+                            case 1:         // Add Student from CSV File
                                 system.mergeStudentSystem(CsvFileHandler.readCsvFile());
                                 break;
 
-                            case 2:
+                            case 2:         // Add Student Manually
                                 String name = InputValidator.addUniqueName(scanner, system);
                                 int id = InputValidator.addUniqueID(scanner, system);
-                                int age = InputValidator.inputValidAge(scanner);
                                 double gpa = InputValidator.inputValidGPA(scanner);
                                 String year = InputValidator.inputValidYear(scanner);
                                 String department = InputValidator.inputValidDepartment(scanner);
 
                                 if (year.equals("First") || year.equals("Second")) department = "General";
 
-                                system.addStudent(name, id, age, gpa, year, department, false);
+                                system.addStudent(name, id, gpa, year, department, false);
                                 break;
 
-                            default:
+                            default:        // Invalid choice
                                 System.out.println("Invalid choice, please try again.");
                         }
                     }
                     break;
 
-                case 2:
+                case 2:             // Remove Student
                     int removeID = InputValidator.inputValidID(scanner);
                     system.removeStudentByID(removeID);
                     break;
 
-                case 3:
+                case 3:             // Update Student
                     int updateID = InputValidator.inputValidID(scanner);
 
                     while (true) {
                         System.out.println("Choose an option to update:");
                         System.out.println(" 1. Student's Name.");
-                        System.out.println(" 2. Student's Age.");
-                        System.out.println(" 3. Student's GPA.");
-                        System.out.println(" 4. Student's Year.");
-                        System.out.println(" 5. Student's Department.");
+                        System.out.println(" 2. Student's GPA.");
+                        System.out.println(" 3. Student's Year.");
+                        System.out.println(" 4. Student's Department.");
                         System.out.println(" 0. Exit Update.");
 
                         int updateChoice = InputValidator.inputValidChoice(scanner);
-                        if (updateChoice == 0) {
+                        if (updateChoice == 0) {        // Exit Update
                             System.out.println();
                             break;
                         }
 
                         switch (updateChoice) {
-                            case 1:
+                            case 1:             // Update Student's Name
                                 String newName = InputValidator.addUniqueName(scanner, system);
-                                system.updateStudentByID(updateID, newName, -1, -1, null, null);
+                                system.updateStudentByID(updateID, newName, -1, null, null);
                                 break;
 
-                            case 2:
-                                int newAge = InputValidator.inputValidAge(scanner);
-                                scanner.nextLine();
-                                system.updateStudentByID(updateID, null, newAge, -1, null, null);
-                                break;
-
-                            case 3:
+                            case 2:             // Update Student's GPA
                                 double newGPA = InputValidator.inputValidGPA(scanner);
                                 scanner.nextLine();
-                                system.updateStudentByID(updateID, null, -1, newGPA, null, null);
+                                system.updateStudentByID(updateID, null, newGPA, null, null);
                                 break;
 
-                            case 4:
+                            case 3:             // Update Student's Year
                                 String newYear = InputValidator.inputValidYear(scanner);
                                 scanner.nextLine();
-                                system.updateStudentByID(updateID, null, -1, -1, newYear, null);
+                                system.updateStudentByID(updateID, null, -1, newYear, null);
                                 break;
 
-                            case 5:
+                            case 4:             // Update Student's Department
                                 String newDepartment = InputValidator.inputValidDepartment(scanner);
                                 scanner.nextLine();
-                                system.updateStudentByID(updateID, null, -1, -1, null, newDepartment);
+                                system.updateStudentByID(updateID, null, -1, null, newDepartment);
                                 break;
 
-                            default:
+                            default:            // Invalid choice
                                 System.out.println("Invalid choice, please try again.");
                         }
                     }
 
                     break;
 
-                case 4:
+                case 4:             // Search Student by ID
                     int searchID = InputValidator.inputValidID(scanner);
                     system.searchByID(searchID);
                     break;
 
-                case 5:
+                case 5:             // List and Sort Students
                     while (true) {
                         System.out.println("Output all students in:");
                         System.out.println(" 1. The Console.");
@@ -141,12 +133,12 @@ public class App {
 
                         int outputChoice = InputValidator.inputValidChoice(scanner);
 
-                        if (outputChoice == 0) {
+                        if (outputChoice == 0) {            // Exit List and Sort
                             System.out.println();
                             break;
                         }
 
-                        else if (outputChoice == 1) {
+                        else if (outputChoice == 1) {       // Output in the Console
                             System.out.print("Enter sorting criteria (GPA, ID, Name, Year): ");
                             String sortBy = scanner.nextLine();
 
@@ -160,20 +152,20 @@ public class App {
                             break;
                         }
 
-                        else if (outputChoice == 2) {
+                        else if (outputChoice == 2) {       // Output in a File (CSV)
                             CsvFileHandler.writeCsvFile(system);
                             break;
                         }
 
-                        else System.out.println("Invalid choice, please try again.\n");
+                        else System.out.println("Invalid choice, please try again.\n");      // Invalid choice
                     }
                     break;
 
-                case 6:
-                    System.out.print("Choose an option to filter (Age - GPA - Year - Department): ");
+                case 6:             // Filter Students
+                    System.out.print("Choose an option to filter (GPA - Year - Department): ");
                     String filterChoice = scanner.nextLine();
 
-                    while (!filterChoice.matches("Age|GPA|Year|Department")) {
+                    while (!filterChoice.matches("GPA|Year|Department")) {
                         System.out.println("Invalid input. Please enter a valid year.");
                         System.out.print("Choose an option to filter (Age - GPA - Year - Department): ");
                         filterChoice = scanner.nextLine();
@@ -198,66 +190,60 @@ public class App {
                             system.filterByDepartment(filterDepartment);
                             break;
 
-                        case "Age":
-                            int filterAge = InputValidator.inputValidAge(scanner);
-                            System.out.println();
-                            system.filterByAge(filterAge);
-                            break;
-
                         default:
                             System.out.println("Invalid choice, please try again.\n");
                     }
                     break;
 
-                case 7:
+                case 7:             // Count Total Students
                     system.countTotalStudents();
                     break;
 
-                case 8:
+                case 8:             // Calculate Average GPA
                     system.calculateAverageGPA();
                     break;
 
-                case 9:
+                case 9:             // Display Top 5 Students
                     system.displayTop5();
                     break;
 
-                case 10:
+                case 10:            // Display Failing Students
                     system.displayFailingStudents();
                     break;
 
-                case 11:
+                case 11:            // Generate Summary
                     System.out.println("Choose an option to output generated summary:");
                     System.out.println(" 1. Output the Summary in the Console.");
                     System.out.println(" 2. Output the Summary in the Report File.");
                     System.out.println(" 0. Exit Summary.");
 
                     int summaryChoice = InputValidator.inputValidChoice(scanner);
-                    if (summaryChoice == 0) {
+                    if (summaryChoice == 0) {           // Exit Summary
                         System.out.println();
                         break;
                     }
 
                     switch (summaryChoice) {
-                        case 1:
+                        case 1:             // Output the Summary in the Console
                             system.generateSummary();
                             break;
 
-                        case 2:
+                        case 2:             // Output the Summary in the Report File
                             TxtFileHandler.writeTxtFile(system);
                             break;
 
-                        default:
+                        default:            // Invalid choice
                             System.out.println("Invalid choice, please try again.");
                     }
                     break;
 
-                case 0:
+                case 0:             // Exit Application.
                     System.out.println("\t==> Thank you for using Student Management System Application!");
                     System.out.println("\t\t==> Exiting system...");
                     scanner.close();
                     return;
 
-                default:
+                default:            // Invalid choice
                     System.out.println("Invalid choice, please try again.\n");
             }
         }
