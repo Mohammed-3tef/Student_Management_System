@@ -111,6 +111,7 @@ public class StudentSystem {
                 System.out.println("------------------------------------------------------------------");
                 System.out.printf("%-20s  |  %-8s  |  %-4.2f  |  %-6s  |  %-5s%n",
                         student.name, student.ID, student.GPA, student.year, student.department);
+                System.out.println();
                 return;
             }
         }

@@ -1,3 +1,13 @@
+// Author: Mohammad Atef Abd El-Kader
+// ID: 20231143
+// Section: S14
+// TA: Mostafa Hesham
+// Date: DONE on 26/02/2025 (Alhamdulillah...)
+// Description: The main class of the Student Management System Application
+//   that contains the main function to run the application.
+
+    // ---------------------------------------------- IMPORTS ----------------------------------------------
+
 import java.util.*;
 import packages.system.*;
 import packages.fileHandler.*;

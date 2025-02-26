@@ -7,20 +7,9 @@
     <list default="true" id="8697c061-63b0-47e7-9d04-02745270902b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final_Students.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Final_Report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/Final_Students.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/students.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Student_Management_System/students2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Student_Management_System/students2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/fileHandler/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/packages/fileHandler/CsvFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/fileHandler/TxtFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/packages/fileHandler/TxtFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/system/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/packages/system/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/system/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/packages/system/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/system/StudentSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/packages/system/StudentSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students.csv" beforeDir="false" afterPath="$PROJECT_DIR$/students.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/students2.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +103,8 @@
       <workItem from="1740226925226" duration="1579000" />
       <workItem from="1740229369554" duration="48000" />
       <workItem from="1740318280626" duration="327000" />
-      <workItem from="1740586740890" duration="7566000" />
+      <workItem from="1740586740890" duration="8226000" />
+      <workItem from="1740597060523" duration="1946000" />
     </task>
     <servers />
   </component>
