@@ -16,7 +16,6 @@ class CsvFileHandler {
 
 class InputValidator {
   + InputValidator() 
-  + inputValidAge(Scanner) int
   + inputValidDepartment(Scanner) String
   + inputValidChoice(Scanner) int
   + addUniqueName(Scanner, StudentSystem) String
@@ -30,21 +29,19 @@ class InputValidator {
 
 class Student {
   + Student() 
-  + Student(int, String, int, double, String, String) 
+  + Student(int, String, double, String, String) 
   + String name
   + double GPA
   + int ID
-  + int age
   + String department
   + String year
 }
 
 class StudentSystem {
-  + StudentSystem() 
   - ArrayList~Student~ studentList
-  + updateStudentByID(int, String, int, double, String, String) void
-  + filterByAge(int) void
-  + addStudent(String, int, int, double, String, String, boolean) void
+  + StudentSystem() 
+  + updateStudentByID(int, String, double, String, String) void
+  + addStudent(String, int, double, String, String, boolean) void
   + removeStudentByID(int) void
   + displayFailingStudents() void
   + sortStudentsBy(String) void
